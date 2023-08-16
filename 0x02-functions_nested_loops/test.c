@@ -4,6 +4,6 @@
 int main(int ac, char **av)
 {
 	if (ac == 2)
-		print_last_digit(atoi(av[1]));
+		jack_bauer();
 	return (0);
 }
