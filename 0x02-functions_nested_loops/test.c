@@ -1,8 +1,12 @@
 #include "main.h"
 
 
-int main(void)
+int main(int ac, char **av)
 {
-	_islower('0');
+	if (ac == 2)
+	{
+		if (_islower(av[1][0]))
+			_putchar('L');
+	}
 	return 0;
 }
