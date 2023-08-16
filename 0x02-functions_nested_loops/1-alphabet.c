@@ -1,18 +1,17 @@
 #include "main.h"
 
 /**
- * main - _putchar
- * Description: a program to print "_ptuchar"
+ * print_alphabet - Print the Alphabet
+ * Description: a program to print the Alphabet
  * Return: always 0
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	char *ptc = "_putchar\n";
-	int i;
+	int c;
 
-	i = -1;
-	while (ptc[++i])
-		_putchar(ptc[i]);
-	return (0);
+	c = 'a' - 1;
+	while (++c <= 'z')
+		_putchar(c);
+	_putchar('\n');
 }
