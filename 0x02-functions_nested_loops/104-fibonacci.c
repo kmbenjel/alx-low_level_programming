@@ -30,7 +30,7 @@ int main(void)
 	nl = n / 1000000000;
 	nr = n % 1000000000;
 
-	for (i = 91; i < 99; i++)
+	for (i = 91; i < 98; i++)
 	{
 		printf(", %ld", nl);
 		printf("%ld", nr);
