@@ -32,16 +32,18 @@ void times_table(void)
 				_putchar((p / 10) + '0');
 				_putchar((p % 10) + '0');
 			}
-			if (c == 9)
-			{
-				_putchar('\n');
-			} else
+			if (c != 9)
 			{
 				_putchar(',');
 				_putchar(' ');
 				if (p < 10)
 					_putchar(' ');
+			} else
+			{
+				_putchar('\n');
 			}
+			if (c == 8 && p < 10)
+				_putchar(' ');
 			c++;
 		}
 		r++;
