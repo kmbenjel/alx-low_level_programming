@@ -4,6 +4,6 @@
 int main(int ac, char **av)
 {
 	if (ac == 2)
-		print_to_98(atoi(av[1]));
+		print_times_table(atoi(av[1]));
 	return (0);
 }
