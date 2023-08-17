@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Fib4
@@ -11,10 +12,10 @@
 
 int main(void)
 {
-	unsigned int long i;
-	unsigned int long c;
-	unsigned int long next;
-	unsigned int long temp;
+	size_t i;
+	size_t c;
+	size_t next;
+	size_t temp;
 
 	i = 0;
 	next = 1;
@@ -23,16 +24,16 @@ int main(void)
 
 	while (c < 97)
 	{
-		if ((i + next) / 100000)
-			printf("%ld", (i + next) / 100000);
-		printf("%ld, ", (i + next) % 100000);
+		if ((i + next) / 1000000000000)
+			printf("%ld", (i + next) / 1000000000000);
+		printf("%ld, ", (i + next) % 1000000000000);
 		temp = i;
 		i = next;
 		next = temp + next;
 		c++;
 	}
-	if ((i + next) / 100000)
-		printf("%ld", (i + next) / 100000);
-	printf("%ld\n", (i + next) % 100000);
+	if ((i + next) / 1000000000000)
+		printf("%ld", (i + next) / 1000000000000);
+	printf("%ld\n", (i + next) % 1000000000000);
 	return (0);
 }
