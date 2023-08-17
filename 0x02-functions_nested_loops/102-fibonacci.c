@@ -10,10 +10,10 @@
 
 int main(void)
 {
-	int i;
-	int c;
-	int next;
-	int temp;
+	unsigned int long i;
+	unsigned int long c;
+	unsigned int long next;
+	unsigned int long temp;
 
 	i = 0;
 	next = 1;
@@ -22,12 +22,12 @@ int main(void)
 
 	while (c < 49)
 	{
-		printf("%d, ", i + next);
+		printf("%ld, ", i + next);
 		temp = i;
 		i = next;
 		next = temp + next;
 		c++;
 	}
-	printf("%d\n", i + next);
+	printf("%ld\n", i + next);
 	return (0);
 }
