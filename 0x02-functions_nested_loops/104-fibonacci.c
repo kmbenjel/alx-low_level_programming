@@ -11,34 +11,24 @@
 
 int main(void)
 {
-	unsigned int long i, c, n, cl, cr, nl, nr;
+	unsigned int long i;
+	unsigned int long c;
+	unsigned int long next;
+	unsigned int long temp;
 
-	c = 1;
-	n = 2;
+	i = 0;
+	next = 1;
+	c = 0;
+	temp = 0;
 
-	printf("%ld", c);
-
-	for (i = 1; i < 91; i++)
+	while (c < 90)
 	{
-		printf(", %ld", n);
-		n = n + c;
-		c = n - c;
+		printf("%lld, ", i + next);
+		temp = i;
+		i = next;
+		next = temp + next;
+		c++;
 	}
-
-	cl = c / 1000000000;
-	cr = c % 1000000000;
-	nl = n / 1000000000;
-	nr = n % 1000000000;
-
-	for (i = 91; i < 98; i++)
-	{
-		printf(", %ld", nl);
-		printf("%ld", nr);
-		nr = nr + cr;
-		cr = nr - cr;
-		nl = nl + cl;
-		cl = nl - cl;
-	}
-	printf("\n");
+	printf("%lld\n", i + next);
 	return (0);
 }
