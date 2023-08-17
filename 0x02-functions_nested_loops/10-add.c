@@ -3,7 +3,9 @@
 /**
  * add - add two ints
  * Description: Write a function that adds two integers
- * and returns the result.
+ * and returns the result
+ * @a: first int
+ * @b: second int
  * Return: an int
  */
 
