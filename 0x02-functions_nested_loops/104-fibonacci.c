@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * main - Fib4
@@ -12,28 +11,34 @@
 
 int main(void)
 {
-	size_t i;
-	size_t c;
-	size_t next;
-	size_t temp;
+	unsigned int long i, c, n, cl, cr, nl, nr;
 
-	i = 0;
-	next = 1;
-	c = 0;
-	temp = 0;
+	c = 1;
+	n = 2;
 
-	while (c < 97)
+	printf("%ld", c);
+
+	for (i = 1; i < 91; i++)
 	{
-		if ((i + next) / 1000000000000)
-			printf("%ld", (i + next) / 1000000000000);
-		printf("%ld, ", (i + next) % 1000000000000);
-		temp = i;
-		i = next;
-		next = temp + next;
-		c++;
+		printf(", %ld", n);
+		n = n + c;
+		c = n - c;
 	}
-	if ((i + next) / 1000000000000)
-		printf("%ld", (i + next) / 1000000000000);
-	printf("%ld\n", (i + next) % 1000000000000);
+
+	cl = c / 1000000000;
+	cr = c % 1000000000;
+	nl = n / 1000000000;
+	nr = n % 1000000000;
+
+	for (i = 91; i < 99; i++)
+	{
+		printf(", %ld", nl);
+		printf("%ld", nr);
+		nr = nr + cr;
+		cr = nr - cr;
+		nl = nl + cl;
+		cl = nl - cl;
+	}
+	printf("\n");
 	return (0);
 }
