@@ -24,7 +24,7 @@ void print_triangle(int size)
 		x = 0;
 		while (x < size)
 		{
-			if (x < size - y)
+			if (x < size - y - 1)
 				_putchar(' ');
 			else
 				_putchar('#');
