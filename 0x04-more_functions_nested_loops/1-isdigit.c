@@ -1,4 +1,4 @@
-#incdlue "main.c"
+#include "main.h"
 
 /**
  * _isdigit - is digit
