@@ -1,7 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdio.h>
+#include <stdlib.h>
 
+int is_prime(long n);
 void print_diagonal(int n);
 void print_triangle(int size);
 int _isupper(int c);

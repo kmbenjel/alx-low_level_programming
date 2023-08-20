@@ -1,4 +1,7 @@
 #include "main.h"
+#include "100-is_prime.c"
+#include "101-print_number.c"
+#include "putchar.c"
 
 /**
  * main - Prime Factor
@@ -10,23 +13,19 @@
 
 int main(void)
 {
-	long int n = 612852475143;
-	long int div = 2, largest_prime;
+	long num=612852475143, result=1, div=3;
 
-	while (n)
+	while (num > 1)
 	{
-		if (n % div != 0)
-			div++;
-		else
+		if (num % div == 0)
 		{
-			largest_prime = n;
-			if (n / div == 1)
-			{
-				printf("%ld\n", largest_prime);
-				break;
-			}
+			num /= div;
+			if (is_prime(div))
+				result = div;
 		}
-		n /= div;
+		div++;
 	}
+	print_number(result);
+	_putchar('\n');
 	return (0);
 }
