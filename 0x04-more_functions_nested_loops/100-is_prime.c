@@ -10,6 +10,7 @@ int is_prime(long n)
 {
 	int factor = 2;
 	int divisors = 1;
+
 	while (n > 1)
 	{
 		if (n % factor == 0)

@@ -13,7 +13,7 @@
 
 int main(void)
 {
-	long num=612852475143, result=1, div=3;
+	long num = 612852475143, result = 1, div = 3;
 
 	while (num > 1)
 	{
