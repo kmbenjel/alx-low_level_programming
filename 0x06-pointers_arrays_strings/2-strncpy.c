@@ -4,6 +4,9 @@
  * _strncpy - Copy n chars
  * Description: The strncpy() function is similar,
  * except that at most n bytes of src are copied.
+ * @dest: char *
+ * @src: char *
+ * @n: int
  * Return: char *
  */
 
