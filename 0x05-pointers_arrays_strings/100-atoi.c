@@ -9,7 +9,7 @@
 
 static char space_or_sign(char c)
 {
-	char str[9] = "\t\n\v\f\r+- ";
+	char *str = "\t\n\v\f\r+- ";
 	int i = 0;
 
 	while (str[i])
