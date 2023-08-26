@@ -24,8 +24,8 @@ static char is_digit(char c)
 
 int _atoi(char *s)
 {
-	unsigned int i = 0;
-	int sign = 1, result = 0;
+	unsigned int result = 0;
+	int sign = 1, i = 0;
 
 	if (!s)
 		return (0);
