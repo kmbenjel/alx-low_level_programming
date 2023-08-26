@@ -24,12 +24,13 @@ static char is_digit(char c)
 
 int _atoi(char *s)
 {
-	unsigned int i = 0, sign = 1, result = 0;
+	unsigned int i = 0;
+	int sign = 1, result = 0;
 
 	if (!s)
 		return (0);
 
-	while (!is_digit(s[i]))
+	while (s[i] && !is_digit(s[i]))
 	{
 		if (s[i] == '-')
 			sign *= -1;
