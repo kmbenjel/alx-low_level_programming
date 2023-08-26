@@ -1,8 +1,5 @@
 #include "main.h"
 
-
-
-
 /**
  * is_digit - Is digit
  * Description: Is digit
@@ -50,6 +47,4 @@ int _atoi(char *s)
 	}
 	return (result * sign);
 }
-
-
 
