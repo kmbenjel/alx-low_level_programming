@@ -7,6 +7,7 @@
  * Return: 0 or 1
  */
 
+/*
 static char space_or_sign(char c)
 {
 	char *str = "\t\n\v\f\r+- ";
@@ -21,6 +22,7 @@ static char space_or_sign(char c)
 	return (0);
 }
 
+*/
 
 /**
  * is_digit - Is digit
@@ -46,15 +48,15 @@ static char is_digit(char c)
 
 int _atoi(char *s)
 {
-	int i = 0, sign = 1, result = 0;
+	unsigned int i = 0, sign = 1, result = 0;
 
 	if (!s)
 		return (0);
 
-	while (space_or_sign(s[i]))
+	while (!is_digit(s[i]))
 	{
-		if (s[i] == '-' && is_digit(s[i + 1]))
-			sign = -1;
+		if (s[i] == '-')
+			sign *= -1;
 		i++;
 	}
 
