@@ -1,26 +1,21 @@
 #include "main.h"
-#include "4-pow_recursion.c"
 
 /**
  * sqrt_go - Goes from an initial guess
  * Description: Start with n/2 and adapt
  * @n: an int
- * @g: the guess
+ * @g: the guess, a double
  * Return: int
  */
 
 int sqrt_go(int n, int g)
 {
-	if (n == 0 || n == 1)
-		return (n);
-	if (n < 0)
+	if (n < 0 || g < 0)
 		return (-1);
-	if (g <= 0)
-		return (-1);
-	if (_pow_recursion(g, 2) == n)
+	if (g * g == n)
 		return (g);
-	else
-		return (sqrt_go(n, g - 1));
+	else if (g * g < n)
+		return (sqrt_go(n, g + 1));
 	return (-1);
 }
 
@@ -34,5 +29,5 @@ int sqrt_go(int n, int g)
 
 int _sqrt_recursion(int n)
 {
-	return (sqrt_go(n, n / 2));
+	return (sqrt_go(n, 0));
 }
