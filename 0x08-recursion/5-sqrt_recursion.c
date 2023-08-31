@@ -9,7 +9,7 @@
  * Return: int
  */
 
-static int sqrt_go(int n, int g)
+int sqrt_go(int n, int g)
 {
 	if (n == 0 || n == 1)
 		return (n);
