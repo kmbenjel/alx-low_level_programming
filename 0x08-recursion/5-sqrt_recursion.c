@@ -34,5 +34,5 @@ int sqrt_go(int n, int g)
 
 int _sqrt_recursion(int n)
 {
-	return (sqrt_go(n, n / 2 + n % 2));
+	return (sqrt_go(n, n / 2));
 }
