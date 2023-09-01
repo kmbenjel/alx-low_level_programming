@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+void _puts(char *);
 void _putchar(int);
 void print_number(int);
 int _atoi(char *);
