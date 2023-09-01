@@ -42,6 +42,7 @@ int main(int ac, char **av)
 void _puts(char *s)
 {
 	int i = -1;
+
 	while (s[++i])
 		_putchar(s[i]);
 }
