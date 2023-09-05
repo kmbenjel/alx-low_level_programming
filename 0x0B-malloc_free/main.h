@@ -3,6 +3,7 @@
 
 # include <stdlib.h>
 
+int **alloc_grid(int width, int height);
 int		_strlen(char *str);
 void	_putchar(int);
 char	*create_array(unsigned int size, char c);
