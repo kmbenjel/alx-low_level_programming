@@ -10,16 +10,15 @@
 
 int	pop_listint(listint_t **head)
 {
-	int	data;
-	listint_t *deleted;
+	int			data;
+	listint_t	*deleted;
 
 	if (!head || !*head)
 		return (0);
-
 	deleted = *head;
 	data = (*head)->n;
 	*head = (*head)->next;
-
-	free_listint(deleted);
+	deleted->next = NULL;
+	free_listint2(&deleted);
 	return (data);
 }
