@@ -12,10 +12,9 @@ int	main(void)
 {
 	listint_t	*head;
 	listint_t	*new;
-	listint_t	hello;
+	listint_t	hello = {8, NULL};
 	size_t		n;
 
-	hello = {8, NULL};
 	head = &hello;
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
