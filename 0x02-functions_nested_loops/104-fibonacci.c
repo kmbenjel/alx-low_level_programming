@@ -23,12 +23,12 @@ int main(void)
 
 	while (c < 90)
 	{
-		printf("%lld, ", i + next);
+		printf("%lu, ", i + next);
 		temp = i;
 		i = next;
 		next = temp + next;
 		c++;
 	}
-	printf("%lld\n", i + next);
+	printf("%lu\n", i + next);
 	return (0);
 }
