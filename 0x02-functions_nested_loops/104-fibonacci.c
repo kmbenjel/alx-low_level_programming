@@ -12,16 +12,16 @@
 int main(void)
 {
 	unsigned int long i;
-	unsigned int long c;
 	unsigned int long next;
 	unsigned int long temp;
+	int c;
 
 	i = 0;
 	next = 1;
 	c = 0;
 	temp = 0;
 
-	while (c < 90)
+	while (c < 97)
 	{
 		printf("%lu, ", i + next);
 		temp = i;
