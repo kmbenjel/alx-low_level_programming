@@ -6,8 +6,6 @@ NAME = school
 
 $(NAME) : m.h $(SRC)
 
-%.o: %.c
-
 all: $(NAME)
 
 fclean: oclean clean
