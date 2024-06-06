@@ -13,7 +13,7 @@ clean:
 	$(RM) $(NAME) *~ *.swp
 
 oclean:
-	$(RM) *.o
+	$(RM) $(OBJ)
 
 re: fclean all
 
