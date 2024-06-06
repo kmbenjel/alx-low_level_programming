@@ -6,9 +6,7 @@ NAME = school
 
 $(NAME) : $(SRC) m.h
 
-shool.c : school.o
-
-main.c : main.o
+%.o: %.c
 
 
 all: $(NAME)
