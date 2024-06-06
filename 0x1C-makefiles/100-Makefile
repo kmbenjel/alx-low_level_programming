@@ -6,10 +6,9 @@ NAME = school
 
 include m.h
 
-$(NAME) : $(OBJ)
+$(NAME) : $(SRC)
 
 all: $(NAME)
-
 
 fclean: oclean clean
 
