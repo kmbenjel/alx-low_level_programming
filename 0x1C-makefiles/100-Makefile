@@ -6,7 +6,7 @@ NAME = school
 
 $(NAME) : $(OBJ) m.h
 
-%.o: %.c
+%(OBJ) : %(SRC)
 
 
 all: $(NAME)
