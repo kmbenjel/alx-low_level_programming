@@ -10,7 +10,9 @@ $(NAME) : $(OBJ)
 all: $(NAME)
 
 fclean: oclean clean
+
 clean:
 	$(RM) $(NAME) *~ *.swp
+
 oclean:
 	$(RM) *.o
