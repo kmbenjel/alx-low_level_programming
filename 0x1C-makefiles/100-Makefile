@@ -4,10 +4,12 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 
+include m.h
+
 $(NAME) : $(OBJ)
-%.o: %.c
-	$(CC) -c -o $@ $<
-all: $(NAME) m.h
+
+all: $(NAME)
+
 
 fclean: oclean clean
 
