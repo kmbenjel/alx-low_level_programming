@@ -6,6 +6,11 @@ NAME = school
 
 $(NAME) : $(SRC) m.h
 
+shool.c : school.o
+
+main.c : main.o
+
+
 all: $(NAME)
 
 fclean: oclean clean
