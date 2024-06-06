@@ -16,3 +16,5 @@ clean:
 
 oclean:
 	$(RM) *.o
+
+re: fclean all
