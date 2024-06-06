@@ -11,6 +11,6 @@ all: $(NAME)
 
 fclean: oclean clean
 clean:
-	$(RM) $(NAME) *.swp *~
+	$(RM) $(NAME) *~ *.swp
 oclean:
 	$(RM) *.o
