@@ -6,10 +6,10 @@ NAME = school
 
 $(NAME) : $(OBJ)
 
-%(OBJ) : %(SRC)
+$(OBJ) : $(SRC)
 
 
-all: $(NAME)
+all: m.h $(NAME)
 
 fclean: oclean clean
 
