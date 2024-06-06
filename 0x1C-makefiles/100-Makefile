@@ -4,8 +4,8 @@ SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 
-$(NAME) : m.h $(SRC)
-	$(CC) -o $(NAME) $< m.h
+$(NAME) : m.h $(OBJ)
+	$(CC) -o $@ $<
 
 all: $(NAME)
 
