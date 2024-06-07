@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+<<<<<<< HEAD
 
 def island_perimeter(grid):
   perimeter = 0
@@ -17,3 +18,7 @@ def island_perimeter(grid):
           perimeter -= 1
   return perimeter
 
+=======
+def island_perimeter(grid):
+    return size(grid) * size(grid[0])
+>>>>>>> ff4aa8b19ad1e200b148f1547a3deca48476907d
