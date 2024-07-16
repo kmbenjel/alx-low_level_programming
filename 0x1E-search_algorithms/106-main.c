@@ -1,8 +1,8 @@
 #include "search_algos.h"
 
-listint_t	*create_list(int *array, size_t size);
-void		print_list(const listint_t *list);
-void		free_list(listint_t *list);
+skiplist_t	*create_skiplist(int *array, size_t size);
+void		print_skiplist(const skiplist_t *list);
+void		free_skiplist(skiplist_t *list);
 
 /**
  * main - Entry point
@@ -15,16 +15,16 @@ int	main(void)
 				99};
 	size_t	size;
 
-	listint_t *list, *res;
+	skiplist_t *list, *res;
 	size = sizeof(array) / sizeof(array[0]);
-	list = create_list(array, size);
-	print_list(list);
-	res = jump_list(list, size, 53);
+	list = create_skiplist(array, size);
+	print_skiplist(list);
+	res = linear_skip(list, 53);
 	printf("Found %d at index: %lu\n\n", 53, res->index);
-	res = jump_list(list, size, 2);
+	res = linear_skip(list, 2);
 	printf("Found %d at index: %lu\n\n", 2, res->index);
-	res = jump_list(list, size, 999);
+	res = linear_skip(list, 999);
 	printf("Found %d at index: %p\n", 999, (void *)res);
-	free_list(list);
+	free_skiplist(list);
 	return (EXIT_SUCCESS);
 }
