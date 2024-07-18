@@ -3,6 +3,14 @@
 int	interpolation_search_recursive(int *array, size_t low, size_t high,
 		int value);
 
+/**
+ * interpolation_search - Interpolation Search
+ * @array: int*
+ * @size: size_t
+ * @value: int
+ * Return: int
+ */
+
 int	interpolation_search(int *array, size_t size, int value)
 {
 	size_t	low;
@@ -14,6 +22,15 @@ int	interpolation_search(int *array, size_t size, int value)
 	high = size - 1;
 	return (interpolation_search_recursive(array, low, high, value));
 }
+
+/**
+ * interpolation_search_recursive - Interpolation Search Recursive
+ * @array: int*
+ * @low: size_t
+ * @high: size_t
+ * @value: int
+ * Return: int
+ */
 
 int	interpolation_search_recursive(int *array, size_t low, size_t high,
 		int value)
