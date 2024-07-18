@@ -35,7 +35,7 @@ int	jump_search(int *array, size_t size, int value)
 	while (array[prev] < value)
 	{
 		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
-		if ((size_t)prev == MIN((size_t)needle, size) + 1)
+		if ((size_t)prev == MIN((size_t)needle, size))
 			return (-1);
 		prev++;
 	}
