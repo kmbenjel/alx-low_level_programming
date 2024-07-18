@@ -20,26 +20,26 @@ int	jump_search(int *array, size_t size, int value)
 	needle = step;
 	if (!array || size == 0)
 		return (-1);
-	while (array[MIN((size_t)needle, size)] < value)
+	while (needle < (int)size && array[needle] < value)
 	{
 		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
 		prev = needle;
 		needle += step;
-		if ((size_t)prev >= size)
+		if (prev >= (int)size)
 		{
 			break ;
 		}
 	}
 	printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
 	printf("Value found between indexes [%d] and [%d]\n", prev, needle);
-	while (array[prev] < value)
+	while (prev < (int)size && array[prev] < value)
 	{
 		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
-		if ((size_t)prev == MIN((size_t)needle, size))
+		if (prev == needle)
 			return (-1);
 		prev++;
 	}
-	if (array[prev] == value)
+	if (prev < (int)size && array[prev] == value)
 	{
 		printf("Value checked array[%d] = [%d]\n", prev, array[prev]);
 		return (prev);
