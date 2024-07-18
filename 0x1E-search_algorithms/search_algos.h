@@ -1,6 +1,6 @@
 #ifndef SEARCH_ALGOS_H
 # define SEARCH_ALGOS_H
-
+# define MIN(X, Y) (((X) < (Y)) ? (X) : (Y))
 # include <stdio.h>
 # include <stdlib.h>
 
