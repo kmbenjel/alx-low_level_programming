@@ -18,7 +18,7 @@ int	jump_search(int *array, size_t size, int value)
 	prev = 0;
 	step = sqrt(size);
 	needle = step;
-	if (!array)
+	if (!array || size == 0)
 		return (-1);
 	while (array[MIN((size_t)needle, size)] < value)
 	{
