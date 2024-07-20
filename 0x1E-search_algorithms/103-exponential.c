@@ -22,10 +22,11 @@ int	exponential_search(int *array, size_t size, int value)
 		printf("Value checked array[%d] = [%d]\n", bound, array[bound]);
 		bound *= 2;
 	}
-	if (bound > (int)size)
-		end = size - 1;
+	if (bound >= (int)size)
+		end = size;
 	else
-		end = bound;
-	printf("Value found between indexes [%d] and [%d]\n", bound / 2, bound - 1);
-	return (binary_search((array + (bound / 2)), end - bound / 2, value));
+		end = bound + 1;
+	printf("Value found between indexes [%d] and [%d]\n", bound / 2, end - 1);
+	return (binary_search((array + (bound / 2)), end - bound / 2, value) + bound
+		/ 2);
 }
