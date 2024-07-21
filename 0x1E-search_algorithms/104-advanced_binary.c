@@ -36,7 +36,7 @@ int	recursive_binary(int *array, size_t low, size_t high, int value)
 	if (array[mid] < value)
 		return (recursive_binary(array, mid + 1, high, value));
 	if (array[mid] > value)
-		return (recursive_binary(array, low, mid - 1, value));
+		return (recursive_binary(array, low, mid, value));
 	return (-1);
 }
 
