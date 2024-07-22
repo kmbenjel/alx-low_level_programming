@@ -27,19 +27,19 @@ listint_t	*jump_list(listint_t *list, size_t size, int value)
 		prev_node = node;
 		for (i = 0; i < step && node->next; i++)
 			node = node->next;
-		printf("Value checked array[%lu] = [%d]\n", node->index, node->n);
+		printf("Value checked at index [%lu] = [%d]\n", node->index, node->n);
 	}
 	printf("Value found between indexes [%lu] and [%lu]\n", prev_node->index,
 		node->index);
 	node = prev_node;
 	while (node && node->n < value)
 	{
-		printf("Value checked array[%lu] = [%d]\n", node->index, node->n);
+		printf("Value checked at index [%lu] = [%d]\n", node->index, node->n);
 		node = node->next;
 	}
 	if (node && node->n == value)
 	{
-		printf("Value checked array[%lu] = [%d]\n", node->index, node->n);
+		printf("Value checked at index [%lu] = [%d]\n", node->index, node->n);
 		return (node);
 	}
 	return (NULL);
